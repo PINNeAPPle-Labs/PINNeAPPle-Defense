@@ -18,7 +18,9 @@
 8. [Standards, V&V, and Governance Context](#8-standards-vv-and-governance-context)
 9. [Open Challenges & Gaps](#9-open-challenges--gaps)
 10. [Roadmap: Building the Open Reference Hub](#10-roadmap-building-the-open-reference-hub)
-11. [Sources](#11-sources)
+11. [Where this reference meets the PINNeAPPle codebase](#11-where-this-reference-meets-the-pinneapple-codebase)
+12. [Contributing](#12-contributing)
+13. [Sources](#13-sources)
 
 ---
 
@@ -227,7 +229,50 @@ These are the classical, high-fidelity tools that physics-AI surrogates are trai
 
 ---
 
-## 11. Sources
+## 11. Where this reference meets the PINNeAPPle codebase
+
+*Added November 2026.* Everything above describes the field. This section is the other half: the places inside the PINNeAPPle organisation where each topic has something runnable, so a claim here can be checked against a case rather than taken on trust. Links are to live issues and finished experiments, not aspirations.
+
+### Use cases and open work in [`PINNeAPPle`](https://github.com/PINNeAPPle-Labs/PINNeAPPle)
+
+| Topic from this document | Where it lives |
+|---|---|
+| Section 2 — wheel–soil models as hard constraints | [#398](https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/398) planetary rovers on regolith: traversability and slip on the Moon and Mars (terramechanics) |
+| Section 4 — multibody and granular baselines | [#503](https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/503) Project Chrono (PyChrono): multibody dynamics, granular DEM, vehicles and terramechanics |
+| Section 5 — perception for field robots | [#333](https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/333) terrain traversability for field robots (vision plus the Bekker wheel–soil model) |
+| Section 8 — dual-use inspection platforms | [#1737](https://github.com/PINNeAPPle-Labs/PINNeAPPle/issues/1737) inspection rover terramechanics and digital twin |
+
+### Finished experiments in [`PINNeAPPle-Benchmark`](https://github.com/PINNeAPPle-Labs/PINNeAPPle-Benchmark)
+
+| Experiment | What it measures |
+|---|---|
+| [`04_terramechanics_robust`](https://github.com/PINNeAPPle-Labs/PINNeAPPle-Benchmark/tree/main/experiments/04_terramechanics_robust) | A Bekker–Wong constraint audit and a parametric 8-D surrogate, with the hard constraints enforced rather than learned — the honest version of "the surrogate respects the physics" that Section 8 asks for. |
+
+### Scope
+
+This document covers unclassified, open material only. Weapons development is out of scope for PINNeAPPle: the organisation had a missile-defence prototype proposal and cancelled it without starting, which is why no such code exists in any of the repositories.
+
+### Related repositories
+
+- [`PINNeAPPle`](https://github.com/PINNeAPPle-Labs/PINNeAPPle) — the library itself: PINNs, neural operators, solvers, geometry, validation.
+
+---
+
+## 12. Contributing
+
+This document is curated, and corrections are the most valuable contribution it receives.
+
+1. Open an issue or a pull request with the specific addition, correction or removal.
+2. **Cite a real, checkable source** — a paper, an official repo, a vendor page. Anything not verifiable is marked as such rather than stated as fact.
+3. Keep entries factual and neutral; no marketing language for commercial products, including PINNeAPPle's own.
+4. When adding a dataset, tool or solver, say what it is, who maintains it and where it lives.
+5. Flag what has gone stale — funding rounds, acquisitions and renamed products move quickly in this field.
+
+The full conventions are in [CONTRIBUTING.md](../CONTRIBUTING.md). If you are adding something that has a runnable counterpart in the PINNeAPPle organisation, add a row to Section 10 as well so the claim stays checkable.
+
+---
+
+## 13. Sources
 
 **Academic / preprint literature**
 - Field Predictions of Hypersonic Cones using Physics-Informed Neural Networks — https://www.researchgate.net/publication/363332780_Field_Predictions_of_Hypersonic_Cones_using_Physics-Informed_Neural_Networks
